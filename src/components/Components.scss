@@ -1,0 +1,52 @@
+@use "@styles/variables" as *;
+
+.heading-container {
+	display: flex;
+	flex-direction: column;
+	gap: $small;
+
+	&.centered {
+		align-items: center;
+	}
+
+	.eyebrow {
+		text-transform: uppercase;
+		font-weight: 700;
+		opacity: 0.4;
+		font-size: 14px;
+	}
+
+	.wave {
+		width: 100px;
+	}
+
+	h1 {
+		color: blue;
+	}
+
+	h2 {
+		color: green;
+	}
+
+	h1,
+	h2,
+	&.accent {
+		color: $accent;
+	}
+}
+
+.button {
+	background-color: $accent;
+	padding: $small $large;
+	border-radius: 20px;
+	color: $light;
+	box-shadow: $shadow-small;
+	width: max-content;
+	transition: all 0.4s ease-in-out;
+
+	&:hover {
+		box-shadow: $halo-large;
+		transform: translateY(-2px);
+		background-color: #f3759d;
+	}
+}

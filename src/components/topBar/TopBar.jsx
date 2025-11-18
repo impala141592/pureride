@@ -26,10 +26,12 @@ const Navigation = ({}) => {
 const TopBar = ({}) => {
 	return (
 		<div className='top-bar-container'>
-			<div className='logo'>
-				<span className='pure'>pure</span>
-				<span>ride</span>
-			</div>
+			<Link to='/'>
+				<div className='logo'>
+					<span className='pure'>pure</span>
+					<span>ride</span>
+				</div>
+			</Link>
 			<Navigation />
 		</div>
 	);

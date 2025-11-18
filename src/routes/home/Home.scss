@@ -1,0 +1,23 @@
+@use "@styles/variables" as *;
+
+.home {
+	.about {
+		display: flex;
+		flex-direction: row;
+		gap: $massive;
+		flex-wrap: wrap;
+		align-items: center;
+
+		.left,
+		.right {
+			width: calc(50% - $massive / 2);
+		}
+
+		.right {
+			display: flex;
+			flex-direction: column;
+			gap: $massive;
+			margin-top: $massive;
+		}
+	}
+}
