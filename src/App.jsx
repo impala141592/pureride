@@ -5,6 +5,7 @@ import AOS from "aos";
 import "./styles/_globals.scss";
 
 import TopBar from "./components/topBar/TopBar";
+import Footer from "./components/footer/Footer";
 
 import Home from "./routes/home/Home";
 
@@ -21,6 +22,7 @@ function App() {
 				{/* <Route path='/portfolio' element={<Portfolio />} /> */}
 				{/* <Route path='/contact' element={<Contact />} /> */}
 			</Routes>
+			<Footer />
 		</div>
 	);
 }

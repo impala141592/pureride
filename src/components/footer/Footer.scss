@@ -1,0 +1,60 @@
+@use "@styles/variables" as *;
+
+.footer {
+	.footer-cta {
+		width: 100%;
+		text-align: center;
+		padding: $massive;
+		background-color: $accent;
+		color: $light;
+		background-image: url("../../assets/jakub-zerdzicki-YEbgNaIHn9Q-unsplash.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 120%;
+		background-attachment: fixed;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: $large;
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: $dark;
+			opacity: 0.8;
+			z-index: 1;
+		}
+
+		h2,
+		p,
+		a {
+			position: relative;
+			z-index: 2;
+		}
+		a {
+			font-weight: 600;
+			text-decoration: underline;
+			color: $accent;
+		}
+	}
+
+	.footer-bottom {
+		width: 100%;
+		padding: $micro $large;
+		background-color: #021f2b;
+		box-shadow: $shadow-medium;
+		position: relative;
+		z-index: 10;
+
+		p {
+			font-size: 14px;
+			color: $accent;
+			text-align: center;
+			font-weight: 400;
+		}
+	}
+}
