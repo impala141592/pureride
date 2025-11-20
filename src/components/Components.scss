@@ -7,6 +7,12 @@
 
 	&.centered {
 		align-items: center;
+		text-align: center;
+	}
+
+	@media (max-width: 1024px) {
+		align-items: center;
+		text-align: center;
 	}
 
 	.eyebrow {

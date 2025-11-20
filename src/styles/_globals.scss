@@ -13,6 +13,10 @@
 	width: 1240px;
 	margin: 0 auto;
 	padding: $grand;
+
+	@media (max-width: 1240px) {
+		width: 100%;
+	}
 }
 
 //Typography

@@ -1,6 +1,7 @@
 import "./Components.scss";
 import Wave from "../assets/wave.svg";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Heading = ({
 	eyebrow,
@@ -8,13 +9,36 @@ const Heading = ({
 	subheading,
 	mainHeading = false,
 	accent = false,
-	centered = false,
+	centered: centeredProp = false,
+	size,
 }) => {
+	const [isCentered, setIsCentered] = useState(centeredProp);
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth <= 1024) {
+				setIsCentered(true);
+			} else {
+				setIsCentered(centeredProp);
+			}
+		};
+
+		// initialize
+		handleResize();
+
+		// listen to resize
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, [centeredProp]);
+
 	const Tag = mainHeading ? "h1" : "h2";
-	const Fade = centered ? "fade-down" : "fade-right";
+	const Fade = isCentered ? "fade-down" : "fade-right";
+
 	return (
 		<div
-			className={centered ? "heading-container centered" : "heading-container"}
+			className={
+				isCentered ? "heading-container centered" : "heading-container"
+			}
 		>
 			{eyebrow && <span className='eyebrow'>{eyebrow}</span>}
 			<img src={Wave} alt='wave' className='wave' />

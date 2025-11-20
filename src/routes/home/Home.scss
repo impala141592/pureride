@@ -12,9 +12,18 @@
 		flex-wrap: wrap;
 		align-items: center;
 
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			text-align: center;
+		}
+
 		.left,
 		.right {
 			width: calc(50% - $massive / 2);
+
+			@media (max-width: 1024px) {
+				width: 100%;
+			}
 		}
 
 		.right {
@@ -22,6 +31,10 @@
 			flex-direction: column;
 			gap: $massive;
 			margin-top: $massive;
+
+			@media (max-width: 1024px) {
+				align-items: center;
+			}
 		}
 	}
 
@@ -29,10 +42,11 @@
 		display: flex;
 		flex-direction: column;
 		gap: $massive;
+		padding: $grand 0;
 
 		.services-swiper {
 			width: 100%; //must if parent is flex
-			padding-bottom: $grand;
+			padding: $grand;
 		}
 
 		.swiper-button-next,
@@ -40,11 +54,15 @@
 			color: $accent;
 			width: 18px;
 			height: 18px;
+
+			@media (max-width: 1024px) {
+				display: none;
+			}
 		}
 
 		.swiper-scrollbar {
-			width: 100%;
-			left: 0;
+			width: calc(100% - $grand * 2);
+			left: $grand;
 		}
 
 		.service-card {
