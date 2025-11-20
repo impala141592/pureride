@@ -11,13 +11,14 @@ const Heading = ({
 	centered = false,
 }) => {
 	const Tag = mainHeading ? "h1" : "h2";
+	const Fade = centered ? "fade-down" : "fade-right";
 	return (
 		<div
 			className={centered ? "heading-container centered" : "heading-container"}
 		>
 			{eyebrow && <span className='eyebrow'>{eyebrow}</span>}
 			<img src={Wave} alt='wave' className='wave' />
-			<Tag data-aos='fade-up' className={accent ? "accent" : ""}>
+			<Tag data-aos={Fade} className={accent ? "accent" : ""}>
 				{heading}
 			</Tag>
 			{subheading && <h4>{subheading}</h4>}

@@ -56,7 +56,7 @@ const Hero = () => {
 	return (
 		<div className='hero'>
 			<div className='hero-copy'>
-				<h1>Gotowi na coś więcej?</h1>
+				<h1 data-aos='fade-up'>Gotowi na coś więcej?</h1>
 			</div>
 			<div className='hero-image'></div>
 		</div>

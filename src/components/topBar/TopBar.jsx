@@ -14,7 +14,6 @@ const Navigation = ({}) => {
 			<ul className='navigation'>
 				{navigationItems.map((item, index) => (
 					<li key={index}>
-						<span className='pure'>pure</span>
 						<Link to={item.to}>{item.text}</Link>
 					</li>
 				))}

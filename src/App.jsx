@@ -2,9 +2,6 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "aos/dist/aos.css";
 import AOS from "aos";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
-// import "./App.css";
 import "./styles/_globals.scss";
 
 import TopBar from "./components/topBar/TopBar";

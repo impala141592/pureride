@@ -20,18 +20,12 @@
 		width: 100px;
 	}
 
-	h1 {
-		color: blue;
-	}
-
-	h2 {
-		color: green;
-	}
-
 	h1,
-	h2,
-	&.accent {
-		color: $accent;
+	h2 {
+		color: $dark;
+		&.accent {
+			color: $accent;
+		}
 	}
 }
 

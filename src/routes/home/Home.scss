@@ -1,6 +1,10 @@
 @use "@styles/variables" as *;
 
 .home {
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+
 	.about {
 		display: flex;
 		flex-direction: row;
@@ -18,6 +22,78 @@
 			flex-direction: column;
 			gap: $massive;
 			margin-top: $massive;
+		}
+	}
+
+	.services {
+		display: flex;
+		flex-direction: column;
+		gap: $massive;
+
+		.services-swiper {
+			width: 100%; //must if parent is flex
+			padding-bottom: $grand;
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			color: $accent;
+			width: 18px;
+			height: 18px;
+		}
+
+		.swiper-scrollbar {
+			width: 100%;
+			left: 0;
+		}
+
+		.service-card {
+			height: 480px;
+			padding: $large;
+
+			background: $dark;
+			color: $light;
+			border-radius: $large;
+
+			display: flex;
+			flex-direction: column;
+			gap: $large;
+			// justify-content: space-around;
+
+			.service-image {
+				width: 100%;
+				height: 160px;
+				object-fit: cover;
+				border-radius: 8px;
+				background-color: black;
+			}
+
+			.heading {
+				h4 {
+					color: $accent;
+				}
+				.caption {
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 14px;
+				}
+			}
+
+			.wave {
+				width: 100px;
+				height: 20px;
+				object-fit: contain;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 20px;
+				font-weight: 300;
+			}
+
+			.button {
+				margin-top: auto;
+			}
 		}
 	}
 }
