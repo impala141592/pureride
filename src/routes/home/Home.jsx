@@ -49,21 +49,21 @@ const Services = () => {
 			id: 1,
 			title: "Kreatywne eventy",
 			subtitle: "Lorem ipsum produkcje",
-			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos reprehenderit soluta exercitationem, vel explicabo, consequuntur aspernatur minima corrupti quisquam.",
+			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Events,
 		},
 		{
 			id: 2,
 			title: "Gry scenariuszowe",
 			subtitle: "immersyjne doświadczenia",
-			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos reprehenderit soluta exercitationem.",
+			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Scenario,
 		},
 		{
 			id: 3,
 			title: "Szkolenia",
 			subtitle: "doswiadczenia ratownicze",
-			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos reprehenderit soluta exercitationem, vel explicabo, consequuntur aspernatur minima corrupti quisquam.",
+			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Emergency,
 		},
 		{
@@ -77,7 +77,7 @@ const Services = () => {
 			id: 5,
 			title: "Podróże",
 			subtitle: "eventy zagraniczne",
-			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos reprehenderit soluta exercitationem, vel explicabo, consequuntur aspernatur minima corrupti quisquam.",
+			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Travel,
 		},
 	];
@@ -101,7 +101,7 @@ const Services = () => {
 					0: { slidesPerView: 1.2 },
 					480: { slidesPerView: 1.6 },
 					768: { slidesPerView: 2.3 },
-					1024: { slidesPerView: 3.5 },
+					1024: { slidesPerView: 3.2 },
 				}}
 			>
 				{services.map((item, i) => (
@@ -111,19 +111,21 @@ const Services = () => {
 							data-aos='fade-up'
 							data-aos-delay={item.id * 100}
 						>
+							<div className='copy'>
+								<div className='heading'>
+									<h4>{item.title}</h4>
+									<p className='caption'>{item.subtitle}</p>
+								</div>
+								<img src={Wave} alt='wave' className='wave' />
+
+								<p className='text'>{item.text}</p>
+								<Button link={true} text='learn more' action='/' />
+							</div>
 							<img
 								src={item.image}
 								alt={item.title}
 								className='service-image'
 							/>
-							<div className='heading'>
-								<h4>{item.title}</h4>
-								<p className='caption'>{item.subtitle}</p>
-							</div>
-							<img src={Wave} alt='wave' className='wave' />
-
-							<p>{item.text}</p>
-							<Button link={true} text='learn more' action='/' />
 						</div>
 					</SwiperSlide>
 				))}
