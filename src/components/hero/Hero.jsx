@@ -3,6 +3,7 @@ import "swiper/css"; // basic styles
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import WaveCut from "../../assets/wave-cut.svg";
 
 import "./Hero.scss";
 
@@ -55,10 +56,13 @@ const HeroS = () => {
 const Hero = () => {
 	return (
 		<div className='hero'>
-			<div className='hero-copy'>
+			{/* <div className='hero-copy'>
 				<h1 data-aos='fade-up'>Gotowi na coś więcej?</h1>
-			</div>
-			<div className='hero-image'></div>
+			</div> */}
+			{/* <img src={WaveCut} alt='wave-cut' className='wave-cut' /> */}
+			{/* <div className='hero-ewa'></div> */}
+			<img src='./ewa.png' alt='ewa' className='hero-ewa' />
+			<div className='hero-bg'></div>
 		</div>
 	);
 };

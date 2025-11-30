@@ -1,0 +1,16 @@
+<svg
+				version='1.0'
+				xmlns='http://www.w3.org/2000/svg'
+				width='1000.000000pt'
+				height='40.000000pt'
+				viewBox='0 0 1000.000000 40.000000'
+				preserveAspectRatio='xMidYMid meet'
+			>
+				<g
+					transform='translate(0.000000,0.000000) scale(1,1)'
+					fill='#e9e3d5'
+					stroke='none'
+				>
+					<path d='M0,20 Q20,0 40,20 T80,20 T120,20 T160,20 T200,20 T240,20 T280,20 T320,20 T360,20 T400,20 T440,20 T480,20 T520,20 T560,20 T600,20 T640,20 T680,20 T720,20 T760,20 T800,20 T840,20 T880,20 T920,20 T960,20 T1000,20   L1000,40 L0,40 Z' />
+				</g>
+			</svg>

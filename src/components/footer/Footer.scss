@@ -1,6 +1,15 @@
 @use "@styles/variables" as *;
 
 .footer {
+	h2 {
+		font-size: 60px;
+		line-height: 40px;
+		position: relative;
+		z-index: 100;
+		width: 1240px;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
 	.footer-cta {
 		width: 100%;
 		text-align: center;
@@ -30,7 +39,7 @@
 		}
 
 		h2,
-		p,
+		h4,
 		a {
 			position: relative;
 			z-index: 2;
