@@ -1,0 +1,22 @@
+@use "@styles/variables" as *;
+
+.infinite-logos-container {
+	overflow: hidden;
+	width: 100%;
+	padding: $grand 0;
+	background-color: $dark;
+}
+
+.infinite-logos-ticker {
+	display: flex;
+	gap: 120px; // spacing between logos
+	white-space: nowrap;
+}
+
+.logo-item img {
+	max-height: 100px; // adjust logo size
+	object-fit: contain;
+	display: block;
+	filter: brightness(0);
+	opacity: 0.6;
+}

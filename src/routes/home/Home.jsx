@@ -6,6 +6,7 @@ import "swiper/css"; // basic styles
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import { Navigation, Scrollbar } from "swiper/modules";
+import Logos from "../../components/logos/Logos";
 
 import Wave from "../../assets/wave.svg";
 import Events from "./assets/events.jpg";
@@ -137,6 +138,7 @@ const Home = () => {
 			<Hero />
 			<About />
 			<Services />
+			<Logos />
 		</div>
 	);
 };
