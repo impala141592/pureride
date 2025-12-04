@@ -9,6 +9,14 @@
 		width: 1240px;
 		margin: 0 auto;
 		margin-top: 40px;
+		@media (max-width: 1240px) {
+			width: 100%;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 32px;
+			line-height: 22px;
+		}
 	}
 	.footer-cta {
 		width: 100%;
