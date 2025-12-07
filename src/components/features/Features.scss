@@ -1,0 +1,54 @@
+@use "@styles/variables" as *;
+
+.features {
+	display: flex;
+	flex-direction: column;
+	gap: $massive;
+
+	.features-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: $large;
+		align-items: center;
+		justify-content: center;
+
+		.feature {
+			width: calc(100% / 3 - $large);
+			display: flex;
+			flex-direction: column;
+			gap: $large;
+			align-items: center;
+			padding: $large;
+			text-align: center;
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+
+			.caption {
+				text-transform: uppercase;
+				font-weight: 700;
+				opacity: 0.4;
+				font-size: 14px;
+			}
+
+			img {
+				mix-blend-mode: multiply;
+				width: 100px;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: $small;
+				text-align: center;
+
+				li {
+					font-size: 16px;
+					line-height: 24px;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}
