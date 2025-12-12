@@ -27,12 +27,20 @@
 	width: 100vw;
 	background-color: $dark;
 	position: relative;
+	top: -80px;
+	z-index: 0;
 	padding: $massive;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	box-shadow: $shadow-large;
+	margin-bottom: -80px;
+
+	&.small {
+		height: 30vh;
+	}
 
 	.wave-cut {
 		width: 100%;

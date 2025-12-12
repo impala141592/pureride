@@ -4,8 +4,18 @@
 //Layout
 .app {
 	width: 100vw;
+	min-height: 100vh;
 	background-color: $bg;
 	color: $dark;
+	display: flex;
+	flex-direction: column;
+
+	.content {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 80px;
+	}
 }
 
 .contained {

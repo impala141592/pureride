@@ -67,7 +67,7 @@ const Mission = () => {
 
 const Home = () => {
 	return (
-		<div className='home'>
+		<div className='home content'>
 			<Hero />
 			<About />
 			<Services />

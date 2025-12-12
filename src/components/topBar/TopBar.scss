@@ -2,12 +2,13 @@
 
 .top-bar-container {
 	width: 100%;
+	height: 80px;
 	padding: $medium $massive;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	position: absolute;
+	position: relative;
 	z-index: 1000;
 
 	.logo {

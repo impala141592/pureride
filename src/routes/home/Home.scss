@@ -1,10 +1,6 @@
 @use "@styles/variables" as *;
 
 .home {
-	display: flex;
-	flex-direction: column;
-	gap: 100px;
-
 	.about {
 		display: flex;
 		flex-direction: row;

@@ -8,9 +8,9 @@ import HeroImage from "./bg.png";
 
 import "./Hero.scss";
 
-const Hero = () => {
+const Hero = ({ image, small = false }) => {
 	return (
-		<div className='hero'>
+		<div className={small ? "hero small" : "hero"}>
 			{/* <div className='hero-copy'>
 				<h1 data-aos='fade-up'>Gotowi na coś więcej?</h1>
 			</div> */}
@@ -18,7 +18,7 @@ const Hero = () => {
 			{/* <div className='hero-ewa'></div> */}
 			{/* <img src='./ewa.png' alt='ewa' className='hero-ewa' /> */}
 			<div className='hero-bg'>
-				<img src={HeroImage} alt='' />
+				<img src={image} alt='' />
 			</div>
 		</div>
 	);

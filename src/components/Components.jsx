@@ -41,7 +41,7 @@ const Heading = ({
 			}
 		>
 			{eyebrow && <span className='eyebrow'>{eyebrow}</span>}
-			<img src={Wave} alt='wave' className='wave' />
+			{eyebrow && <img src={Wave} alt='wave' className='wave' />}
 			<Tag data-aos={Fade} className={accent ? "accent" : ""}>
 				{heading}
 			</Tag>
