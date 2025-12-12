@@ -50,6 +50,34 @@ const Heading = ({
 	);
 };
 
+const AboutText = ({
+	eyebrow,
+	heading,
+	subheading,
+	text,
+	accent = false,
+	button = false,
+	buttonText,
+	link,
+}) => {
+	return (
+		<section className='contained about'>
+			<div className='left'>
+				<Heading
+					accent={accent}
+					eyebrow={eyebrow}
+					heading={heading}
+					subheading={subheading}
+				/>
+			</div>
+			<div className='right'>
+				<p>{text}</p>
+				{button && <Button link={true} text={buttonText} action={link} />}
+			</div>
+		</section>
+	);
+};
+
 const Button = ({ text, action, link = false }) => {
 	return link ? (
 		<Link to={action} className='button'>
@@ -62,4 +90,4 @@ const Button = ({ text, action, link = false }) => {
 	);
 };
 
-export { Heading, Button };
+export { Heading, AboutText, Button };

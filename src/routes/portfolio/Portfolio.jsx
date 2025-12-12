@@ -42,7 +42,7 @@ const loadPhotos = async () => {
 	return photos;
 };
 
-export function Portfolio() {
+function Portfolio() {
 	const [photos, setPhotos] = useState([]);
 	const [index, setIndex] = useState(-1);
 

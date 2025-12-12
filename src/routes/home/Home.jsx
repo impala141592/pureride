@@ -1,39 +1,11 @@
 import "./Home.scss";
 import Hero from "../../components/hero/Hero";
-import { Heading, Button } from "../../components/Components";
+import { Heading, Button, AboutText } from "../../components/Components";
 
 import Logos from "../../components/logos/Logos";
 import Services from "../../components/services/Services";
 import Features from "../../components/features/Features";
 import Testimonials from "../../components/testimonials/Testimonials";
-
-const About = () => {
-	return (
-		<section className='contained about'>
-			<div className='left'>
-				<Heading
-					accent={true}
-					eyebrow='consequatur distinctio dignissimos corrupti'
-					heading='Cumque ratione quis'
-					subheading='consequuntur aspernatur minima'
-				/>
-			</div>
-			<div className='right'>
-				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-					repellendus deleniti. Ex, saepe! Magnam, doloremque assumenda
-					cupiditate consequatur distinctio dignissimos reprehenderit soluta
-					exercitationem, vel explicabo, consequuntur aspernatur minima corrupti
-					quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Cumque ratione quis eum distinctio adipisci quasi! Nesciunt voluptate
-					iusto eaque quos labore recusandae cum quae tenetur dolorum explicabo.
-					Repellendus, voluptate aut.
-				</p>
-				<Button link={true} text='learn more' action='/' />
-			</div>
-		</section>
-	);
-};
 
 const Mission = () => {
 	return (
@@ -69,7 +41,24 @@ const Home = () => {
 	return (
 		<div className='home content'>
 			<Hero />
-			<About />
+			{/* <About /> */}
+			<AboutText
+				accent={true}
+				eyebrow='consequatur distinctio dignissimos corrupti'
+				heading='Cumque ratione quis'
+				subheading='consequuntur aspernatur minima'
+				text='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+					repellendus deleniti. Ex, saepe! Magnam, doloremque assumenda
+					cupiditate consequatur distinctio dignissimos reprehenderit soluta
+					exercitationem, vel explicabo, consequuntur aspernatur minima corrupti
+					quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Cumque ratione quis eum distinctio adipisci quasi! Nesciunt voluptate
+					iusto eaque quos labore recusandae cum quae tenetur dolorum explicabo.
+					Repellendus, voluptate aut.'
+				button={true}
+				buttonText='czytaj więcej'
+				link='/historia'
+			/>
 			<Services />
 			<Mission />
 			<Features />

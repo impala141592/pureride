@@ -35,6 +35,39 @@
 	}
 }
 
+.about {
+	display: flex;
+	flex-direction: row;
+	gap: $massive;
+	flex-wrap: wrap;
+	align-items: center;
+
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.left,
+	.right {
+		width: calc(50% - $massive / 2);
+
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+	}
+
+	.right {
+		display: flex;
+		flex-direction: column;
+		gap: $massive;
+		margin-top: $massive;
+
+		@media (max-width: 1024px) {
+			align-items: center;
+		}
+	}
+}
+
 .button {
 	background-color: $accent;
 	padding: $small $large;
