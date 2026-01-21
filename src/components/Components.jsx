@@ -10,6 +10,7 @@ const Heading = ({
 	mainHeading = false,
 	accent = false,
 	centered: centeredProp = false,
+	light = false,
 	size,
 }) => {
 	const [isCentered, setIsCentered] = useState(centeredProp);
@@ -40,7 +41,9 @@ const Heading = ({
 				isCentered ? "heading-container centered" : "heading-container"
 			}
 		>
-			{eyebrow && <span className='eyebrow'>{eyebrow}</span>}
+			{eyebrow && (
+				<span className={light ? "eyebrow light" : "eyebrow"}>{eyebrow}</span>
+			)}
 			{eyebrow && <img src={Wave} alt='wave' className='wave' />}
 			<Tag data-aos={Fade} className={accent ? "accent" : ""}>
 				{heading}
