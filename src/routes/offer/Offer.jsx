@@ -7,25 +7,33 @@ import "react-photo-album/masonry.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
+import Events from "../../components/services/assets/events.jpg";
+import Scenario from "../../components/services/assets/scenario.jpg";
+import Sport from "../../components/services/assets/sport.jpg";
+import Emergency from "../../components/services/assets/emergency.jpg";
+import Travel from "../../components/services/assets/travel.jpg";
+
 function OfferButton({ label, anchor, image }) {
 	return (
 		<a className='offer-button' href={anchor}>
 			<span>{label}</span>
-			{/* <img src='' alt='' /> */}
+			<img src={image} alt={image} />
 		</a>
 	);
 }
 
-function OfferSection({ id }) {
+function OfferSection({ id, image, heading }) {
 	return (
 		<section className='offer-section' id={id}>
 			<div className='offer-banner'>
 				<Heading
 					eyebrow='Lorem ipsum dolor sit amet'
-					heading='Kreatywne eventy'
+					heading={heading}
 					accent={true}
 					light={true}
 				/>
+
+				<img className='offer-banner-image' src={image} alt={image} />
 			</div>
 			<div className='offer-contents'>
 				<div className='paragraph'>
@@ -97,35 +105,54 @@ function Offer() {
 							<OfferButton
 								label='Kreatywne eventy'
 								anchor='#kreatywne-eventy'
+								image={Events}
 							/>
 						</li>
 						<li>
 							<OfferButton
 								label='Gry scenariuszowe'
 								anchor='#gry-scenariuszowe'
+								image={Scenario}
 							/>
 						</li>
 						<li>
-							<OfferButton label='Szkolenia' anchor='#szkolenia' />
+							<OfferButton
+								label='Szkolenia'
+								anchor='#szkolenia'
+								image={Emergency}
+							/>
 						</li>
 						<li>
 							<OfferButton
 								label='Projekty sportowe'
 								anchor='#projekty-sportowe'
+								image={Sport}
 							/>
 						</li>
 						<li>
-							<OfferButton label='Podróże' anchor='#podroze' />
+							<OfferButton label='Podróże' anchor='#podroze' image={Travel} />
 						</li>
 					</ul>
 				</div>
 
 				<div className='offers'>
-					<OfferSection id='kreatywne-eventy' />
-					<OfferSection id='gry-scenariuszowe' />
-					<OfferSection id='szkolenia' />
-					<OfferSection id='projekty-sportowe' />
-					<OfferSection id='podroze' />
+					<OfferSection
+						id='kreatywne-eventy'
+						image={Events}
+						heading='Kreatywne eventy'
+					/>
+					<OfferSection
+						id='gry-scenariuszowe'
+						image={Scenario}
+						heading='Gry scenariuszowe'
+					/>
+					<OfferSection id='szkolenia' image={Emergency} heading='Szkolenia' />
+					<OfferSection
+						id='projekty-sportowe'
+						image={Sport}
+						heading='Projekty sportowe'
+					/>
+					<OfferSection id='podroze' image={Travel} heading='Podróże' />
 				</div>
 			</div>
 		</div>

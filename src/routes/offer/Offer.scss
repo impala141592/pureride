@@ -38,6 +38,17 @@
 					padding: $grand;
 					display: flex;
 					align-items: center;
+					position: relative;
+					overflow: hidden;
+
+					.offer-banner-image {
+						position: absolute;
+						top: 0;
+						left: 0;
+						transform: translateY(-50%);
+						width: 100%;
+						opacity: 0.4;
+					}
 				}
 
 				.offer-contents {
@@ -105,10 +116,40 @@
 	}
 
 	.offer-button {
-		background-color: teal;
+		background-color: $accent;
 		border-radius: $medium;
 		padding: $large $large;
 		display: block;
 		margin-bottom: $medium;
+		position: relative;
+		overflow: hidden;
+
+		span {
+			position: relative;
+			z-index: 101;
+			color: $light;
+			font-weight: 500;
+			transition: text-shadow 0.2s;
+		}
+
+		img {
+			position: absolute;
+			z-index: 100;
+			top: -50%;
+			left: 0%;
+			opacity: 0.2;
+
+			width: 100%;
+			transition: opacity 0.4s;
+		}
+
+		&:hover {
+			img {
+				opacity: 0.5;
+			}
+			span {
+				text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+			}
+		}
 	}
 }
