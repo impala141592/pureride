@@ -11,6 +11,7 @@ import Home from "./routes/home/Home";
 import About from "./routes/about/About";
 import Portfolio from "./routes/portfolio/Portfolio";
 import Offer from "./routes/offer/Offer";
+import Contact from "./routes/contact/Contact";
 
 AOS.init();
 
@@ -24,7 +25,7 @@ function App() {
 				<Route path='/historia' element={<About />} />
 				<Route path='/oferta' element={<Offer />} />
 				<Route path='/realizacje' element={<Portfolio />} />
-				{/* <Route path='/contact' element={<Contact />} /> */}
+				<Route path='/kontakt' element={<Contact />} />
 			</Routes>
 			{/* </div> */}
 			<Footer />
