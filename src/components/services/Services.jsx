@@ -23,6 +23,7 @@ const Services = () => {
 			subtitle: "Lorem ipsum produkcje",
 			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Events,
+			url: "/oferta#kreatywne-eventy",
 		},
 		{
 			id: 2,
@@ -30,6 +31,7 @@ const Services = () => {
 			subtitle: "immersyjne doświadczenia",
 			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Scenario,
+			url: "/oferta#gry-scenariuszowe",
 		},
 		{
 			id: 3,
@@ -37,6 +39,7 @@ const Services = () => {
 			subtitle: "doswiadczenia ratownicze",
 			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Emergency,
+			url: "/oferta#szkolenia",
 		},
 		{
 			id: 4,
@@ -44,6 +47,7 @@ const Services = () => {
 			subtitle: "Lorem outdoorowe",
 			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Sport,
+			url: "/oferta#projekty-sportowe",
 		},
 		{
 			id: 5,
@@ -51,6 +55,7 @@ const Services = () => {
 			subtitle: "eventy zagraniczne",
 			text: "Ex, saepe! Magnam, doloremque assumenda cupiditate consequatur distinctio dignissimos.",
 			image: Travel,
+			url: "/oferta#podroze",
 		},
 	];
 	return (
@@ -91,7 +96,7 @@ const Services = () => {
 								<img src={Wave} alt='wave' className='wave' />
 
 								<p className='text'>{item.text}</p>
-								<Button link={true} text='learn more' action='/' />
+								<Button link={true} text='learn more' action={item.url} />
 							</div>
 							<img
 								src={item.image}
