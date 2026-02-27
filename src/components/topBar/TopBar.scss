@@ -70,7 +70,7 @@
 		width: 38px;
 		height: 38px;
 		position: relative;
-		z-index: 1008;
+		z-index: 8000;
 
 		.bar {
 			width: 100%;
@@ -127,7 +127,7 @@
 			height: 100%;
 			background-color: $bg;
 			opacity: 0.8;
-			z-index: 1001;
+			z-index: 9001;
 		}
 
 		&.open {
@@ -140,7 +140,7 @@
 
 		li {
 			position: relative;
-			z-index: 1002;
+			z-index: 9002;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
