@@ -13,6 +13,8 @@ import Sport from "../../components/services/assets/sport.jpg";
 import Emergency from "../../components/services/assets/emergency.jpg";
 import Travel from "../../components/services/assets/travel.jpg";
 
+import OfferHero from "../../assets/hero/offer-hero.png";
+
 function OfferButton({ label, anchor, image }) {
 	return (
 		<a className='offer-button' href={anchor}>
@@ -97,7 +99,7 @@ function OfferSection({ id, image, heading }) {
 function Offer() {
 	return (
 		<div className='content offer'>
-			<Hero small={true} />
+			<Hero small={true} image={OfferHero} />
 			<div className='sidebar-container'>
 				<div className='sidebar'>
 					<ul>

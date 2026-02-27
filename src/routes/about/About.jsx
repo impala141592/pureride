@@ -5,6 +5,7 @@ import { MasonryPhotoAlbum } from "react-photo-album";
 import "react-photo-album/masonry.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import AboutHero from "../../assets/hero/about-hero.png";
 
 const loadPhotos = async () => {
 	const files = import.meta.glob("/src/assets/about/*.{jpg,JPG,jpeg,png}", {
@@ -47,7 +48,7 @@ const About = () => {
 	}, []);
 	return (
 		<div className='about content'>
-			<Hero small={true} />
+			<Hero small={true} image={AboutHero} />
 			<AboutText
 				accent={true}
 				eyebrow='consequatur distinctio dignissimos corrupti'

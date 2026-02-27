@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import Hero from "../../components/hero/Hero";
 import { useEffect } from "react";
 import Wave from "../../assets/wave.svg";
+import ContactHero from "../../assets/hero/contact-hero.png";
 
 function Contact() {
 	useEffect(() => {
@@ -24,7 +25,7 @@ function Contact() {
 
 	return (
 		<div className='content contact'>
-			<Hero small={true} />
+			<Hero small={true} image={ContactHero} />
 			<section className='contained map-info'>
 				<div className='map-container'>
 					<div className='map' id='map'></div>

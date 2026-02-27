@@ -9,6 +9,8 @@ import "react-photo-album/masonry.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
+import PortfolioHero from "../../assets/hero/portfolio-hero.png";
+
 const loadPhotos = async () => {
 	const files = import.meta.glob("/src/assets/gallery/*.{jpg,jpeg,png}", {
 		eager: true,
@@ -52,7 +54,7 @@ function Portfolio() {
 
 	return (
 		<div className='portfolio content'>
-			<Hero small={true} />
+			<Hero small={true} image={PortfolioHero} />
 			<section className='contained'>
 				<Heading
 					eyebrow='Lorem ipsum dolor sit amet'
