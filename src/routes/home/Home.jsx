@@ -6,10 +6,7 @@ import Logos from "../../components/logos/Logos";
 import Services from "../../components/services/Services";
 import Features from "../../components/features/Features";
 import Testimonials from "../../components/testimonials/Testimonials";
-
-import { useHomeAbout } from "../../hooks/useHomeAbout";
-import { useHomeHero } from "../../hooks/useHomeHero";
-import { useHomeOffer } from "../../hooks/useHomeOffer";
+import HeroImage from "../../assets/hero/home-hero.jpg";
 
 const Mission = () => {
 	return (
@@ -34,7 +31,6 @@ const Mission = () => {
 				</p>
 			</div>
 			<div className='right'>
-				{/* <img src={Events} alt='' /> */}
 				<Testimonials />
 			</div>
 		</div>
@@ -42,26 +38,18 @@ const Mission = () => {
 };
 
 const Home = () => {
-	const about = useHomeAbout();
-	const hero = useHomeHero();
-	const offer = useHomeOffer();
-	if (!about) return null;
-	if (!hero) return null;
-	if (!offer) return null;
-	console.log(offer);
 	return (
 		<div className='home content'>
-			<Hero image={hero} />
-			{/* <About /> */}
+			<Hero image={HeroImage} />
 			<AboutText
 				accent={true}
-				eyebrow={about.about_eyebrow}
-				heading={about.about_heading}
-				subheading={about.about_subheading}
-				text={about.about_text}
+				eyebrow='eyebrow'
+				heading='heading'
+				subheading='subheading'
+				text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, nihil deleniti? Quasi inventore non reprehenderit quia sunt, corporis repudiandae voluptatem accusamus ducimus magni atque ipsam asperiores, sit sapiente, vero tempora.'
 				button={true}
-				buttonText={about.about_button_label}
-				link={about.about_button_url}
+				buttonText='czytaj więcej'
+				link='/historia'
 			/>
 			<Services />
 			<Mission />
